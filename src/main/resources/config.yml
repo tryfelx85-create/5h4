@@ -1,0 +1,59 @@
+
+# Nickname of the tournament owner. This player:
+#  - confirms every fight with /agree
+#  - receives anti-cheat warnings (together with players tagged Moders)
+#  - automatically gets the "Master" tag on first join
+owner-nick: TryFX
+
+arena:
+  start-button:
+    x: 38
+    y: 10
+    z: 60
+  fighter1:
+    x: 70
+    y: 5
+    z: 33
+  fighter2:
+    x: 70
+    y: 5
+    z: 90
+  # where /stopspectating sends players
+  lobby:
+    x: 32
+    y: 10
+    z: 66
+
+match:
+  kit-vote-seconds: 20
+  countdown-seconds: 3
+  # 0 = no limit. When time runs out the fighter with more health wins; equal health = draw.
+  time-limit-seconds: 180
+  # commands fighters cannot use during a match
+  blocked-commands:
+    - spectate
+    - stopspectating
+    - tp
+    - teleport
+    - tpa
+    - tpaccept
+    - tphere
+    - home
+    - spawn
+    - warp
+    - back
+    - gamemode
+    - gm
+    - kill
+    - suicide
+
+anticheat:
+  alert-threshold: 6.0
+  alert-cooldown-seconds: 5
+  reach-buffer: 0.5
+  speed-max-bps: 8.0
+  fly-max-rise: 1.5
+  antiknockback-min-push: 0.15
+  aimbot-perfect-error-degrees: 1.5
+  aimbot-snap-degrees: 90
+  killaura-max-angle-degrees: 90

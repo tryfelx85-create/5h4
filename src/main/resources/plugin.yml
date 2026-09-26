@@ -1,0 +1,46 @@
+name: ArenaPlugin
+version: 1.0.0
+main: com.arena.spawn.ArenaPlugin
+api-version: 1.21
+author: YourName
+description: PvP tournament arena plugin
+commands:
+  spectate:
+    description: Enter spectator mode
+    usage: /spectate
+  stopspectating:
+    description: Leave spectator mode and return to the arena
+    usage: /stopspectating
+  queue:
+    description: "Show the fight queue (OP only: add, insert, remove, clear)"
+    usage: "/queue [add <p1> <p2> | insert <#> <p1> <p2> | remove <#> | clear]"
+    aliases: [bracket]
+  playerbot:
+    description: "Spawn, remove or list numbered practice bots (OP only)"
+    usage: "/playerbot <add | remove [name] | list | ai [off|easy|normal|hard]>"
+  agree:
+    description: "Confirm the next fight (TryFX only)"
+    usage: /agree
+  top:
+    description: Show the top players by wins
+    usage: /top
+  stats:
+    description: Show a player's wins and losses
+    usage: /stats [player]
+  endmatch:
+    description: "End the current match as a draw (OP only)"
+    usage: /endmatch
+  pausematch:
+    description: "Pause or resume the current match (OP only)"
+    usage: /pausematch
+  tag:
+    description: Set a player's arena tag (OP only)
+    usage: /tag <player> <text>
+    permission: arena.tag
+permissions:
+  arena.bracket:
+    description: Allows editing the fight queue
+    default: op
+  arena.tag:
+    description: Allows changing player arena tags
+    default: op
